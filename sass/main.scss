@@ -1,7 +1,8 @@
 @import "partials/vendor/materialize/materialize";
 
 .myRed {
-	@extend .red, .darken-2;
+	@extend .red;
+	@extend .darken-2;
 }
 
 .nav-wrapper {

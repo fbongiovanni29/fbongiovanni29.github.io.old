@@ -1,12 +1,12 @@
 $( document ).ready(function() {
-	var home = document.getElementsByClassName('home');
-	var rightOne = document.getElementsByClassName('right one');
-	var rightTwo = document.getElementsByClassName('right two');
-	var leftOne = document.getElementsByClassName('left one');
-	var leftTwo = document.getElementsByClassName('left two');
-	var navhome = document.getElementsByClassName('navhome');
-	var navright1 = document.getElementsByClassName('navright1')
-	var navright2 = document.getElementsByClassName('navright2');
+	var home = $('.home');
+	var rightOne = $('.right.one');
+	var rightTwo = $('.right.two');
+	var leftOne = $('.left.one');
+	var leftTwo = $('.left.two');
+	var navhome = $('.navhome');
+	var navright1 = $('.navright1')
+	var navright2 = $('.navright2');
 	
 
 	var shuffle = [home, rightOne, rightTwo];
