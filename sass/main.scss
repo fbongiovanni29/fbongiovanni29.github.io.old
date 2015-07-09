@@ -1,0 +1,31 @@
+@import "partials/vendor/materialize/materialize";
+
+.myRed {
+	@extend .red, .darken-2;
+}
+
+.nav-wrapper {
+    @extend .myRed;
+}
+
+.right.two{
+	display: none;
+	float: none !important;
+	height: 100%;
+	width: 100%
+
+}
+
+.right.one{
+	background-color: blue;
+	display: none;
+	float: none !important;
+	height: 100%;
+	width: 100%
+}
+
+.home {
+	background-color: green;
+	height: 100%;
+	width: 100%
+}
