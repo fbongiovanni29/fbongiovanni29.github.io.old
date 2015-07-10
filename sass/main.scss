@@ -5,28 +5,28 @@
 	@extend .darken-2;
 }
 
+
 .nav-wrapper {
     @extend .myRed;
 }
 
-.right.two{
-	display: none;
-	float: none !important;
-	height: 100%;
-	width: 100%
-
+.swiperight.two{
+	position: absolute;
+	background-color: yellow;
+	right: -100%;
+	width: 100%;
 }
 
-.right.one{
+.swiperight.one{
+	position: absolute;
 	background-color: blue;
-	display: none;
-	float: none !important;
-	height: 100%;
+	right: -100%;
 	width: 100%
 }
 
 .home {
+	position: absolute;
 	background-color: green;
-	height: 100%;
-	width: 100%
+	right: 0;
+	width: 100%;
 }

@@ -1,9 +1,9 @@
 $( document ).ready(function() {
 	var home = $('.home');
-	var rightOne = $('.right.one');
-	var rightTwo = $('.right.two');
-	var leftOne = $('.left.one');
-	var leftTwo = $('.left.two');
+	var rightOne = $('.swiperight.one');
+	var rightTwo = $('.swiperight.two');
+	var leftOne = $('.swipeleft.one');
+	var leftTwo = $('.swipeleft.two');
 	var navhome = $('.navhome');
 	var navright1 = $('.navright1')
 	var navright2 = $('.navright2');
@@ -23,9 +23,9 @@ $( document ).ready(function() {
 			$("body").on("swipeleft",function(){
 			  		 	if(i === stopper){
 		 				i = stopper;
-	        			$(shuffle[i]).show();
+	        			$(shuffle[i]).show("slide", { direction: "left" }, 1000);
 	    		 		 }	else {	              	              
-	              		$(shuffle[i]).hide();
+	              		$(shuffle[i]).hide("slide", { direction: "left" }, 1000);
 	              		i = i + 1;
 	              		console.log(shuffle[i]);
 	              		$(shuffle[i]).show();
@@ -59,12 +59,19 @@ $( document ).ready(function() {
 	              case 37:
 		 				if(i === stopper){
 		 					i = stopper;
-	        				$(shuffle[i]).show();
+	        				 // show
+	        				  $(shuffle[i]).animate({
+	        				  	right: '-100%'
+	        				  })
+						//$(shuffle[0]).show("slide", { direction: "right" }, 1000);
 	    		 		 }	else {	              	              
-	              		$(shuffle[i]).hide();
 	              		i = i + 1;
 	              		console.log(shuffle[i]);
-	              		$(shuffle[i]).show();
+	              		 // hide
+	              		 //$(shuffle[i]).hide("slide", { direction: "right" }, 1000);
+	              		  $(shuffle[i]).animate({
+	              		  	right: 0
+	              		  })
 	              		console.log(nav[i]);
 	              		$(nav[i]).addClass('active');
 	              		$(nav[i - 1]).removeClass('active');
@@ -78,9 +85,15 @@ $( document ).ready(function() {
 	                  break;
 	              case 39:
 	              		if(i <= 0){
-	              			$(shuffle[0]).show();
+	              		//$(shuffle[0]).show("slide", { direction: "right" }, 1000);
+	        				  $(shuffle[i]).animate({
+	        				  	right: 0
+	        				  })	              		
 	              		} else{	              
-	              		$(shuffle[i]).hide();
+	              		// $(shuffle[i]).hide("slide", { direction: "right" }, 1000);
+	              		  $(shuffle[i]).animate({
+	              		  	right: '-100%'
+	              		  })	              		
 	              		i = i - 1;
 	              		console.log(shuffle[i]);
 	              		$(shuffle[i]).show(); 
